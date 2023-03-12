@@ -1,0 +1,80 @@
+.register {
+    height: 100vh;
+    background-color: rgb(115, 209, 238);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+        .card {
+            width: 50%;
+            display: flex;
+            background-color: azure;
+            flex-direction: row-reverse;
+            border-radius: 10px;
+            min-height: 600px;
+            overflow: hidden;
+    
+    
+            .left{
+                flex: 1;
+                background: linear-gradient(rgba(20, 169, 215, 0.5),rgba(39,11,96,0.5)), url(https://www.entoin.com/images/harem50.jpg);
+                background-size: cover;
+                padding: 40px;
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                color: aliceblue;
+    
+                h1{
+                    font-size: 100px;
+                    line-height: 100px;
+                }
+                p{}
+                span{
+                    font-size: 14px;
+                }
+                button{
+                    width: 50%;
+                    padding: 10px;
+                    border: none;
+                    background-color: white;
+                    color: rgb(16, 17, 17);
+                    font-weight: bold;
+                    cursor: pointer;
+                    border-radius: 10px;
+                }
+            }
+            .right{
+                flex: 1;
+                padding: 50px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 50px;
+                h1{
+                    text-align: center;
+                }
+                form{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 30px;
+    
+                    input{
+                        border: none;
+                        border-bottom: 1px solid lightblue;
+                        padding: 20px 10px;
+    
+                    }
+                    button{
+                        width: 50%;
+                        padding: 10px;
+                        border: none;
+                        background-color: rgb(74, 186, 220);
+                        border-radius: 10px;
+                        color: white;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
