@@ -8,9 +8,9 @@ export const Register = () => {
                 <h1>Sosial Media</h1>
                 <p>Masuk dan nikmatilah berjalajah di dunia sosial media ini</p>
                 <span>do you have account?</span>
-                {/* <Link to="/login"> */}
+                <Link to="/login">
                 <button>Login</button>
-                {/* </Link> */}
+                </Link>
             </div>
             <div className="right">
                 <h1>Register</h1>

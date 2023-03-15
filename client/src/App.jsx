@@ -1,5 +1,5 @@
 
-import './App.css';
+import './App.scss';
 import { Login } from './pages/login/Login';
 import { Register} from './pages/register/Register'
 import { Navbar } from './components/navbar/Navbar'
@@ -9,29 +9,40 @@ import Rightbar from './components/rightbar/Righbar'
 import Profile  from './pages/profile/Profile';
 import {
   createBrowserRouter,
+  Navigate,
   Outlet,
   RouterProvider,
 } from "react-router-dom";
 
+const currentUser = true;
 
 const Layout = () => {
   return(
-    <div>
+    <div className='theme-dark'>
       <Navbar/>
       <div style={{display : 'flex'}}>
         <Leftbar/>
+        <div style={{flex:'6'}}>
         <Outlet/>
+        </div>
         <Rightbar/>
       </div>
     </div>
   )
 }
-
+const ProtectedRoute = ({children}) => {
+  if(!currentUser) {
+    return <Navigate to="/login" />
+  }
+  return children;
+} 
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Layout/>,
+    element: <ProtectedRoute>
+              <Layout/>
+            </ProtectedRoute>,
     children: [
       {
         path: "/",

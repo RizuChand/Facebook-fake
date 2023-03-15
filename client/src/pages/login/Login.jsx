@@ -9,9 +9,9 @@ export const Login = () => {
                 <h1>Hello World</h1>
                 <p>Sebuah aplikasi ajang maen sosial media keur ngabagi informasi nu kira na penting ceuk anjen</p>
                 <span>don't you have account yet?</span>
-                {/* <Link to="/register"> */}
+                <Link to="/register">
                 <button>Register</button>
-                {/* </Link> */}
+                </Link>
             </div>
             <div className="right">
                 <h1>Login</h1>
