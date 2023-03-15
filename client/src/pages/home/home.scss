@@ -4,7 +4,13 @@
 
     @include themify($themes){
 
+    padding: 50px 70px;
+
     background-color: themed('bgSoft');
+
+    .container{
+
+    }
 
 }
 }

@@ -13,12 +13,20 @@ import {
   Outlet,
   RouterProvider,
 } from "react-router-dom";
+import { useContext } from 'react';
+import { DarkModeContext } from './context/DarkModeContext';
+import { AuthContext } from './context/Auth';
 
-const currentUser = true;
+
+function App() {
+  const {darkMode} = useContext(DarkModeContext);
+  const {currentUser} = useContext(AuthContext);
+  
+  // const currentUser = true;
 
 const Layout = () => {
   return(
-    <div className='theme-dark'>
+    <div className={`theme-${darkMode ? "dark" : "light"}`}>
       <Navbar/>
       <div style={{display : 'flex'}}>
         <Leftbar/>
@@ -67,7 +75,7 @@ const router = createBrowserRouter([
   },
 ]);
 
-function App() {
+
 
   return (
     <RouterProvider router={router} />
