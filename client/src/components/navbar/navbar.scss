@@ -34,6 +34,13 @@
             input{
                 border: none;
                 width : 500px;
+
+                @include mobile {
+                    display: none;
+                }
+                @include table {
+                    width: 160px;
+                }
             }
         }
     }
@@ -44,9 +51,14 @@
         gap: 30px;
         color: themed("textColor");
 
+        @include mobile {
+            display: none;
+        }
+
         .user{
             display: flex;
             align-items: center;
+
             img{
                 width: 35px;
                 height: 35px;
@@ -56,6 +68,9 @@
 
             }
             span{
+                @include table {
+                    display: none;
+                }
 
             }
         }

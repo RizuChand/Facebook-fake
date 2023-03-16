@@ -12,5 +12,12 @@
 
     }
 
+    @include mobile {
+        padding: 10px;
+    }
+
+    @include table {
+        padding: 20px;
+    }
 }
 }

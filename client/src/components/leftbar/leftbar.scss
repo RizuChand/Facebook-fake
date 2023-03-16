@@ -21,6 +21,10 @@
     // &::-webkit-scrollbar-thumb:hover {
     //     background: #555; 
     // }
+
+    @include mobile {
+        display: none;
+    }
     .container {
         
         padding: 20px;

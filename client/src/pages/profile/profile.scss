@@ -1,0 +1,126 @@
+@import '../../App.scss';
+
+.profile{
+    @include themify($themes){
+
+    background-color: themed('bgSoft');
+    .images{
+        width: 100%;
+        height: 300px;
+        position: relative;
+        .cover{
+            width: 100%;
+            height: 100%;
+
+        }
+        .imgProfile{
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            object-fit: cover;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            top: 200px;
+
+        }
+        
+    }
+    .container{
+        padding: 30px 70px;
+        @include mobile {
+            padding: 20px;
+        }
+        @include table {
+            padding: 20px;
+        }
+
+        .uInfo{
+            box-shadow: -1px 1px 15px 1px rgba(212,200,200,0.4);
+            -webkit-box-shadow: -1px 1px 15px 1px rgba(212,200,200,0.4);
+            -moz-box-shadow: -1px 1px 15px 1px rgba(212,200,200,0.4);
+            background-color: themed('bg');
+            border-radius: 20px;
+            color: themed("textColor");
+            padding: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+
+            @include mobile {
+                flex-direction: column;
+                height: 30vh;
+                padding: 20px;
+                margin-top: 50px;
+            }
+            .left{
+                display: flex;
+                flex: 1;
+                gap: 10px;
+
+                @include table {
+                    flex-wrap: wrap;
+                }
+
+                a{
+                    color: themed('textColor');
+                }
+
+
+            }
+            .center{
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+
+                span{
+                    
+                    font-weight: 500;
+                    font-size: 30px;
+                }
+
+                .info{
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    
+                    
+                    .item{
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;   
+    
+                        span{
+                            font-size: 12px;
+                        }
+                    }
+                }
+                button{
+                    background-color: rgb(88, 194, 243);
+                    border: none;
+                    border-radius: 10px;
+                    padding: 10px;
+                    color: themed('textColor');
+                    cursor: pointer;
+                }
+
+            }
+            .right{
+                display: flex;
+                flex: 1;
+                justify-content: flex-end;
+                gap: 10px;
+                
+
+            }
+            
+
+        }
+    }
+    }
+}

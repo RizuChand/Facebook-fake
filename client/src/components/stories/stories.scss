@@ -1,14 +1,36 @@
+@import '../../App.scss';
+
 .stories{
     display: flex;
     gap: 10px;
     height: 250px;
     margin-bottom: 30px;
 
+    @include mobile {
+        justify-content: space-between;
+        height: 50px;
+    }
+
     .story{
         flex: 1;
         border-radius: 10px;
         overflow: hidden;
         position: relative;
+
+
+        @include mobile {
+        flex: none;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+    }
+    @include table {
+        height: 170px;
+        gap: 20px;
+        margin-top: 20px;
+
+    }
 
         img{
             height: 100%;
@@ -21,6 +43,9 @@
             bottom: 10px;
             left: 10px;
             font-weight: 500;
+            @include mobile {
+                display: none;
+            }
     
         }
         button{
@@ -38,6 +63,14 @@
             display: flex;
             justify-content: center;
             align-items: center;
+
+            @include mobile {
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+            }
         }
     }
 }
